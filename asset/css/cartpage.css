@@ -1,0 +1,22 @@
+.cart-icon-container{
+    width: 60px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgb(238, 175, 17);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.658);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+  .cart-icon-container a {
+    color: transparent;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Card icon css */

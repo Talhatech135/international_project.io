@@ -1,0 +1,191 @@
+/* navbar css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", system-ui;
+}
+
+body {
+  background-color: rgb(5, 5, 5);
+}
+
+.navbar {
+  background-color: rgb(35, 35, 35);
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.navbar-nav .nav-link.active {
+  color: rgb(238, 175, 17);
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: gold;
+}
+
+.nav-link.active:hover {
+  color: gold;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar {
+  font-size: 17px;
+}
+
+.navbar-toggler-icon {
+  background-size: 120%;
+  color: white;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='1.5' d='M5 8h20M5 15h20M5 22h20'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+
+#offcanvasNavbarLabel {
+  font-weight: bold;
+}
+
+#offcanvasNavbar {
+  background-color: rgb(5, 5, 5);
+}
+
+.dropdown-menu {
+  background-color: black;
+}
+
+.dropdown-menu a {
+  color: rgb(255, 255, 255);
+}
+/* navbar css */
+
+
+
+/* footer start */
+#footer {
+  background-image: url(../img/about-img/purplefoot.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(35, 35, 35);
+  color: rgb(255, 255, 255);
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  box-shadow: inset 0px 0px 4px rgb(0, 0, 0);
+}
+
+.col1 h4,
+.col2 h4,
+.col3 h4 {
+  align-items: center;
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.col1 p,
+.col2 a,
+.col3 a {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.col2 a {
+  color: rgb(184, 178, 178);
+}
+
+.col2 a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.col2 ul,
+.col3 ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.col2 li,
+.col3 li {
+  text-align: center;
+}
+
+.col3 ul {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col3 i {
+  font-size: 26px;
+  transition: color 0.4s;
+}
+
+.facebook-f i,
+.twitter i,
+.youtube i,
+.instagram i {
+  color: #ffffff;
+}
+
+.facebook-f:hover i {
+  color: blue
+}
+
+.twitter:hover i {
+  color: rgb(0, 225, 255)
+}
+
+.youtube:hover i {
+  color: red;
+}
+
+.instagram:hover i {
+  color: rgb(245, 0, 192);
+}
+
+.bottom-bar {
+  color: rgb(255, 255, 255);
+  background: linear-gradient(135deg, #946c00, #a77a00, #8a6301);
+  text-align: center;
+}
+
+.bottom-bar p {
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  margin: 0;
+  text-align: center;
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  #footer.container-fluid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col1 {
+    text-align: center;
+  }
+
+  .col3 ul {
+    align-items: center;
+  }
+}
+/* footer end */

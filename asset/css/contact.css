@@ -1,0 +1,40 @@
+/* Contact Form Styles */
+#contact {
+  max-width: 1400px;
+  padding: 20px;
+  color: #fff;
+}
+
+#contact .row {
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 3px 1px white;
+  background-color: rgb(35, 35, 35);
+}
+
+input::placeholder,textarea::placeholder{
+  color: #b19600f6 !important;
+}
+input, textarea {
+  background-color : #030303 !important ;
+  color: #dfbd00f6 !important;
+}
+
+.form-control {
+  border-radius: 0.25rem;
+}
+label{
+  color: #dfbd00f6;
+}
+.mb-3 {
+  font-size: 18px;
+}
+
+.form-text {
+  font-size: 0.875rem;
+  color: #f4f8fc;
+}
+/*contact css end*/

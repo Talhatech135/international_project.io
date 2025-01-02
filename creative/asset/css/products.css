@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  background-image: linear-gradient(50deg, #0F2027, #203A43, #2C5364);
+}
+.navbar {
+  background-image: linear-gradient(50deg, #0F2027, #203A43, #2C5364);
+  background-color: #203A43;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: gold;
+}
+.nav-link{
+  color: white;
+}
+.nav-link:hover{
+  color: gold;
+}
+.nav-link.active:hover{
+  color: gold;
+}
+.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  font-size: 17px;
+}
+
+.navbar-toggler-icon {
+  background-size: 120%;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+#offcanvasNavbarLabel {
+  font-weight: bold;
+}
+
+#offcanvasNavbar {
+  background-color: rgb(5, 5, 5);
+}
+
+.dropdown-menu {
+  background-image: linear-gradient(50deg, #0F2027, #203A43, #2C5364);
+}
+
+.dropdown-menu a {
+  color: rgb(255, 255, 255);
+}
+
+/* navbar css */
+/* product css start */
+.search-sort-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input,
+select {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.filter-search-bar {
+    align-items: center;
+    justify-content: center;
+    text-align: end;
+    margin-bottom: 20px;
+}
+.product-list .card{
+  color: white;
+  background-image: linear-gradient(50deg, #0F2027, #203A43, #2C5364);
+}
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.product-item {
+    background: #eaeaea;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(90, 88, 88, 0.336);
+    transition: all 0.4s ease;
+}
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 15px rgba(90, 88, 88, 0.336);
+}
+.product-item img{
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+.rating .checked {
+    color: orange;
+}
+.rating{
+  margin-top: 10px;
+}
+.card button{
+  margin-top: 15px;
+}
+.b-design{
+  width: 30%;
+  height: 20%;
+  border-radius: 12px;
+  background-color: #2C5364;
+  color: rgb(255, 255, 255);
+}
+.b-design:hover{
+  color: #c4c4c4;
+}
+/* product css start */
+/* footer css */
+/* footer start */
+#footer {
+  background-image: url(../img/about-img/purplefoot.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(50deg, #0F2027, #203A43, #2C5364);
+  color: rgb(255, 255, 255);
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  box-shadow: inset 0px 0px 4px rgb(0, 0, 0);
+}
+
+.col1 h4,
+.col2 h4,
+.col3 h4 {
+  align-items: center;
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.col1 p,
+.col2 a,
+.col3 a {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.col2 a {
+  color: rgb(184, 178, 178);
+}
+
+.col2 a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.col2 ul,
+.col3 ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.col2 li,
+.col3 li {
+  text-align: center;
+}
+
+.col3 ul {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col3 i {
+  font-size: 26px;
+  transition: color 0.4s;
+}
+
+.facebook-f i,
+.twitter i,
+.youtube i,
+.instagram i {
+  color: #ffffff;
+}
+
+.facebook-f:hover i {
+  color: blue
+}
+
+.twitter:hover i {
+  color: rgb(0, 225, 255)
+}
+
+.youtube:hover i {
+  color: red;
+}
+
+.instagram:hover i {
+  color: rgb(245, 0, 192);
+}
+
+.bottom-bar {
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(50deg, #0F2027, #203A43, #2C5364);
+  text-align: center;
+}
+
+.bottom-bar p {
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  margin: 0;
+  text-align: center;
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  #footer.container-fluid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col1 {
+    text-align: center;
+  }
+
+  .col3 ul {
+    align-items: center;
+  }
+}
+
+/* footer end */

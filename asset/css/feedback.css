@@ -1,0 +1,55 @@
+.feed {
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #946c00, #a77a00, #dfbd00f6, #8a6301);
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.603);
+}
+
+.feed h1 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: #fffefe;
+}
+
+.feed fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.feed legend {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feed label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feed input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.feed textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.feed button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  text-shadow: 0px 0px 2px black;
+  cursor: pointer;
+}

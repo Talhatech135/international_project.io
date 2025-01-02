@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add to cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="asset/css/cartpage.css">
+  <link rel="stylesheet" href="asset/css/navbar.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <b><i><a class="navbar-brand text-white" href="index.html">Home <span>Interior</span></a></i></b>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="product.html">Product</a>
+          </li>
+          <li class="nav-item"></li>
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback.html">Feedback</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="cart-icon-container">
+    <a href="cartpage.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-basket mx-1"
+        viewBox="0 0 16 16">
+        <path
+          d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9zM1 7v1h14V7zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5" />
+      </svg>
+      <span class="badge" id="cartQuantity">0</span>
+    </a>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4 text-light">Shopping Cart</h2>
+
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <!-- Cart Summary -->
+    <div class="d-flex justify-content-end">
+      <div id="checkoutDiv">
+        <h4 class="text-light">Total: Rs: <span id="cartTotal"></span></h4>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#checkoutModal">
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Check OutModal -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Checkout</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="name" class="form-control" id="name" placeholder="John Doe" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="johndoe@gmail.com" required />
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" placeholder="abc town 123 street" required />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="button" class="btn btn-success" onclick="checkout()">
+              Checkout
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Function to render the cart data
+  function renderCart() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartTableBody = document.getElementById("tableBody");
+    let cartTotal = 0;
+
+    cartTableBody.innerHTML = ""; // Clear previous content
+
+    if (cart.length === 0) {
+      cartTableBody.innerHTML =
+        '<tr><td colspan="5" class="text-center">Your cart is empty</td></tr>';
+      document.getElementById('checkoutDiv').style.display = "none"
+      return;
+    }
+
+    cart.forEach((item) => {
+      const total = item.price.split(",").join("") * item.quantity; // Calculate total price per item
+      const row = `
+          <tr>
+            <td>${item.name}</td>
+            <td class="d-flex justify-content-center">
+              <button class="btn btn-outline-primary" onclick="changeQuantity(${item.id
+        }, -1)">-</button>
+              <input type="number" class="form-control w-25" value="${item.quantity
+        }" min="1">
+              <button class="btn btn-outline-primary" onclick="changeQuantity(${item.id
+        }, 1)">+</button>
+            </td>
+            <td>Rs: ${item.price}</td>
+            <td>Rs: ${total.toLocaleString()}</td>
+            <td>
+              <button class="btn btn-danger btn-sm" onclick="removeFromCart(${item.id
+        })">Remove</button>
+            </td>
+          </tr>`;
+      cartTableBody.innerHTML += row;
+      cartTotal += total;
+    });
+    document.getElementById("cartTotal").innerText =
+      cartTotal.toLocaleString();
+    updateHeader();
+  }
+
+  // Function to change quantity
+  function changeQuantity(id, delta) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const product = cart.find((item) => item.id === id);
+
+    if (product) {
+      product.quantity += delta;
+      if (product.quantity < 1) {
+        product.quantity = 1; // Prevent quantity from going below 1
+      }
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+  }
+
+  // Function to remove product from cart
+  function removeFromCart(id) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart = cart.filter((item) => item.id !== id); // Remove the product from cart
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+    updateHeader();
+  }
+
+  //Clear the cart and redirect to home page.
+  function checkout() {
+    alert('Your Order has been placed');
+    localStorage.clear();
+    window.location.href = "index.html"
+  }
+
+  //fetch the quantity and show in header
+  function updateHeader() {
+    cartQuantity = JSON.parse(localStorage.getItem("cart")) || [];
+    document.getElementById("cartQuantity").innerHTML = cartQuantity.length;
+  }
+
+  // Call renderCart on page load
+  window.onload = () => {
+    renderCart();
+  };
+</script>
+
+</html>
